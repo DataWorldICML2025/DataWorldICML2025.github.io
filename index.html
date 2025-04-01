@@ -94,33 +94,7 @@
                 align-items: center;
                 text-align: center;
             }
-
-         @media (max-width: 768px) {
-            /* Fix the nested row structure */
-            .row.row-centered {
-              display: block;
-              clear: both;
-              margin-bottom: 30px;
-            }
-            
-            /* Make columns display properly on mobile */
-            .col-sm-2 {
-              width: 100%;
-              float: none;
-              margin-bottom: 20px;
-              clear: both;
-            }
-            
-            /* Center the team member info */
-            .team-member {
-              text-align: center;
-              margin: 0 auto;
-              max-width: 200px;
-            }
-          }
         </style>
-
-
         <div class="container">
             <br>
 
@@ -529,7 +503,9 @@
                             </a>
                             <p class="text-muted">UT Austin, Bespoke Labs</p>
                         </div>
+                    </div>
 
+                    <div class="row row-centered ">
                         <div class="col-sm-2">
                             <div class="team-member">
                                 <img src="./img/speakers/arim.jpg" height="150" width="150"
@@ -543,6 +519,7 @@
 
 
 
+                        <div class="row row-centered ">
                             <div class="col-sm-2">
                                 <div class="team-member">
                                     <img src="./img/speakers/raghunathan.jpg" height="150" width="150"
@@ -552,9 +529,11 @@
                                     </a>
                                     <p class="text-muted">Carnegie Mellon University</p>
                                 </div>
+                            </div>
 
 
 
+                            <div class="row row-centered ">
                                 <div class="col-sm-2">
                                     <div class="team-member">
                                         <img src="./img/speakers/james_zou.jpeg" height="150" width="150"
