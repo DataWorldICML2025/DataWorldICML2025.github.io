@@ -81,20 +81,39 @@
     <!-- Header -->
     <header>
         <style>
-            header {
-                background-image: url(img/bg_1.jpg);
-                background-size: cover;         /* Ensures the image fully covers the header */
-                background-position: center;    /* Centers the image nicely */
-                background-repeat: no-repeat;   /* Prevents tiling */
-                min-height: 40vh;              /* Makes the header as tall as the viewport */
-                color: #fff;
-                display: flex;                  /* Optional: centers content inside */
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
+        /* Mobile-friendly speaker/panelist grid */
+        @media (max-width: 768px) {
+          /* Container for all speakers/panelists */
+          .speakers-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+          }
+          
+          /* Individual speaker/panelist card */
+          .speaker-card {
+            width: 160px;
+            margin-bottom: 20px;
+            text-align: center;
+          }
+          
+          /* Clean up the nested row structure */
+          .row.row-centered {
+            margin: 0;
+            padding: 0;
+          }
+          
+          .col-sm-2 {
+            width: auto;
+            float: none;
+            margin: 0;
+            padding: 0;
+          }
+        }
         </style>
+
+
         <div class="container">
             <br>
 
@@ -469,89 +488,76 @@
         </div>
     </section>
 
-    <!-- Speaker Section -->
-    <section id="speaker">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 ">
-                    <h2 class="section-heading">Invited Speakers</h2>
-                </div>
-            </div>
-            <br>
-            <br>
-            <br>
-
-            <div class="row row-centered ">
-                <div class="col-sm-2">
-                    <div class="team-member">
-                        <img src="./img/speakers/PangWeiKoh.jpg" height="150" width="150"
-                            class="img-responsive img-circle">
-                        <a href="https://koh.pw/">
-                            <h4>Pang Wei Koh</h4>
-                        </a>
-                        <p class="text-muted">University of Washington</p>
-                    </div>
-                </div>
-
-                <div class="row row-centered ">
-                    <div class="col-sm-2">
-                        <div class="team-member">
-                            <img src="./img/speakers/alexdimakis_sm.jpg" height="150" width="150"
-                                class="img-responsive img-circle">
-                            <a href="https://users.ece.utexas.edu/~dimakis/">
-                                <h4>Alex Dimakis</h4>
-                            </a>
-                            <p class="text-muted">UT Austin, Bespoke Labs</p>
-                        </div>
-                    </div>
-
-                    <div class="row row-centered ">
-                        <div class="col-sm-2">
-                            <div class="team-member">
-                                <img src="./img/speakers/arim.jpg" height="150" width="150"
-                                    class="img-responsive img-circle">
-                                <a href="https://www.arimorcos.com/">
-                                    <h4>Ari Morcos</h4>
-                                </a>
-                                <p class="text-muted">DatologyAI</p>
-                            </div>
-                        </div>
-
-
-
-                        <div class="row row-centered ">
-                            <div class="col-sm-2">
-                                <div class="team-member">
-                                    <img src="./img/speakers/raghunathan.jpg" height="150" width="150"
-                                        class="img-responsive img-circle">
-                                    <a href="https://www.cs.cmu.edu/~aditirag/">
-                                        <h4>Aditi Raghunathan</h4>
-                                    </a>
-                                    <p class="text-muted">Carnegie Mellon University</p>
-                                </div>
-                            </div>
-
-
-
-                            <div class="row row-centered ">
-                                <div class="col-sm-2">
-                                    <div class="team-member">
-                                        <img src="./img/speakers/james_zou.jpeg" height="150" width="150"
-                                            class="img-responsive img-circle">
-                                        <a href="https://www.james-zou.com/">
-                                            <h4>James Zou</h4>
-                                        </a>
-                                        <p class="text-muted">Stanford University</p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section id="speaker">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h2 class="section-heading">Invited Speakers</h2>
+      </div>
+    </div>
+    <br><br><br>
+    
+    <!-- New container for speakers -->
+    <div class="speakers-container">
+      
+      <!-- Speaker 1 -->
+      <div class="speaker-card">
+        <div class="team-member">
+          <img src="./img/speakers/PangWeiKoh.jpg" height="150" width="150" class="img-responsive img-circle">
+          <a href="https://koh.pw/">
+            <h4>Pang Wei Koh</h4>
+          </a>
+          <p class="text-muted">University of Washington</p>
         </div>
-    </section>
+      </div>
+      
+      <!-- Speaker 2 -->
+      <div class="speaker-card">
+        <div class="team-member">
+          <img src="./img/speakers/alexdimakis_sm.jpg" height="150" width="150" class="img-responsive img-circle">
+          <a href="https://users.ece.utexas.edu/~dimakis/">
+            <h4>Alex Dimakis</h4>
+          </a>
+          <p class="text-muted">UT Austin, Bespoke Labs</p>
+        </div>
+      </div>
+      
+      <!-- Speaker 3 -->
+      <div class="speaker-card">
+        <div class="team-member">
+          <img src="./img/speakers/arim.jpg" height="150" width="150" class="img-responsive img-circle">
+          <a href="https://www.arimorcos.com/">
+            <h4>Ari Morcos</h4>
+          </a>
+          <p class="text-muted">DatologyAI</p>
+        </div>
+      </div>
+      
+      <!-- Speaker 4 -->
+      <div class="speaker-card">
+        <div class="team-member">
+          <img src="./img/speakers/raghunathan.jpg" height="150" width="150" class="img-responsive img-circle">
+          <a href="https://www.cs.cmu.edu/~aditirag/">
+            <h4>Aditi Raghunathan</h4>
+          </a>
+          <p class="text-muted">Carnegie Mellon University</p>
+        </div>
+      </div>
+      
+      <!-- Speaker 5 -->
+      <div class="speaker-card">
+        <div class="team-member">
+          <img src="./img/speakers/james_zou.jpeg" height="150" width="150" class="img-responsive img-circle">
+          <a href="https://www.james-zou.com/">
+            <h4>James Zou</h4>
+          </a>
+          <p class="text-muted">Stanford University</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
 
     <!-- Panelist Section -->
     <section id="panelist">
